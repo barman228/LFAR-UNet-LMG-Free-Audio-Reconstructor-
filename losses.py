@@ -18,6 +18,7 @@ class STFTLoss(nn.Module):
             pred = pred.squeeze(1)
             target = target.squeeze(1)
 
+        # Переносим окно на устройство модели
         window = self.window.to(pred.device)
 
         pred_stft = torch.stft(

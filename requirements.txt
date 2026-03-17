@@ -1,5 +1,14 @@
-torch
-torchaudio
-numpy
-soundfile
-tqdm
+Insert your high-low database in "data" folder
+it due a mp3 compressed wav files in "low" and lossless original's wav's in folder "high"
+each file must be with same name, timing's and amplitude
+
+Use: Python train.py - for train the model
+in folder output you can see a wav-test and model backup's each 5 epoch
+wav-test file name - test_sample.wav
+
+Use: Python infer.py - for use model on your audio file
+audio file name is - test_input.wav
+
+database due have above a 6 hours of mono audio in 44100 and 16 bit format in each low-high folders
+for simple train
+or ~12-24 hours for serious train
